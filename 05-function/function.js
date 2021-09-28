@@ -112,8 +112,8 @@ console.log(convToUpperCase('helloeverybody'))
 function firstNonRepeatedChar(word) {
     let huruf;
 
-    for (let index = 0; index < word.length; index++) {
-        huruf = word[index];
+    for (let i = 0; i < word.length; i++) {
+        huruf = word[i];
         if(huruf == " "){
             return "kata tidak boleh dipisah";
         }
@@ -122,14 +122,14 @@ function firstNonRepeatedChar(word) {
 
     for (let index = 0; index < word.length; index++) {
         huruf = word[index];
-        let cek = false;
+        let detect = false;
         for (let j = 0; j < word.length; j++) {
             if(huruf == word[j] && j != index){
-                cek = true;
+                detect = true;
                 break;
             }
         }
-        if(cek == false){
+        if(detect == false){
             return huruf;
             break;
         }
